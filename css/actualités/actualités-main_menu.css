@@ -25,14 +25,12 @@
 
 body {
     color: var(--text-color);
-    background: var(--bg-color);
+    background-color: var(--bg-color);
 }
-
 
 section{
     padding: 70px 17% 60px;
 }
-
 
 .btn {
     display: inline-block;
@@ -136,6 +134,7 @@ header {
     display: none;
 }
 
+
 header.sticky {
     padding: 8px 17%;
     background: transparent;
@@ -144,12 +143,14 @@ header.sticky {
 
 /*Fin de la navbar*/
 
+/*Design accueil*/
+
 
 .accueil {
     position: relative;
     height: 100vh;
     width: 100%;
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.4)), url(../Images/cascade-la-coulisse-trois-rivieres-guadeloupe-guillaume-aricique.jpg);
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.4)), url(../../Images/cascade-la-coulisse-trois-rivieres-guadeloupe-guillaume-aricique.jpg);
     background-size: cover;
     background-position: bottom center;
     display: flex;
@@ -157,119 +158,58 @@ header.sticky {
     justify-content: flex-start;
 }
 
-.accueil-texte h5{
-    font-size: 19px;
-    font-weight: 600;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    color: var(--main-color);
-}
-
 .accueil-texte h1{
     font-size: var(--h1-font);
     font-weight: 800;
-    line-height: 1.2;
     margin-bottom: 20px;
 }
 
-.accueil-texte p{
-    font-size: var(--p-font);
-    font-weight: 500;
-    line-height: 30px;
-    color: #ffffffab;
-    margin-bottom: 35px;
-}
-
-
-
-/* .feature-contenue {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
-    align-items: center;
+.scrollBouton{
+    position: absolute;
+    bottom: 20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background: #27ae60;
     text-align: center;
-    gap: 3rem;
-}
-
-.rangement-images {
-    overflow: hidden;
-    width: 100px;
-    height: 100px;
-    margin: 0 auto;
-    margin-bottom: 20px;
+    line-height: 50px;
+    color: white;
+    font-size: 22px;
     border-radius: 50%;
     cursor: pointer;
+    transition: box-shadow 0.2s ease;
+    transform: rotate(180deg);
+
+  }
+  
+
+  .scrollBouton:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.281);
 }
 
-.rangement-images img {
-    width: 100%;
-    display: block;
-    transition: transform 0.7s;
+.scrollBouton div {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    border-top: 8px solid #202020;
+    border-left: 8px solid #202020;
+
+    left: 27.5px;
+    top: 35px;
 }
 
-.rangement-images img:hover {
-    transform: scale(1.2);
-}
 
-.feature-contenue h4 {
-    font-size: 17px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all .50s ease;
-}
-
-.feature-contenue h4:hover {
-    color: var(--main-color);
-}  */
-
-.TA-actualités {
-    background-color: #222222;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    gap: 9rem;
-}
-
-.TA-actualités-img img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.TA-actualités-texte h5 {
-    font-size: 22px;
-    font-weight: 600;
-    color: var(--main-color);
-    text-transform: uppercase;
-    letter-spacing: 6px;
-    margin-bottom: 20px;
-}
-
-.TA-actualités-texte h2 {
-    font-size: var(--h2-font);
-    font-weight: 800;
-    line-height: 1.2;
-    margin-bottom: 25px;
-}
-
-.TA-actualités-texte p {
-    font-size: var(--p-font);
-    font-weight: 500;
-    line-height: 30px;
-    color: #ffffffab;
-    margin-bottom: 35px;
-}
-
-/*********************   Actualités box   *******************************************/
+/*Fin du design de l'accueil*/
+/*Design de la grille d'actualités*/
 
 #actualité-grid{
+    margin-top: 100px;
 	text-align: center;
     margin-bottom: 80px;
 }
-#actualité-grid h2{
-	font-size: var(--h2-font);
+#actualité-grid h1{
+	font-size: var(--h1-font);
 	font-weight: 800;
 }
 
@@ -279,6 +219,7 @@ header.sticky {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     margin: auto;
+    gap: 1.5rem;
 }
 
 
@@ -287,7 +228,7 @@ header.sticky {
     padding: 20px;
     background-color: #ffffff;
     margin: 20px;
-    box-shadow: 2px 2px 30px rgba(0,0,0,0.05);
+    box-shadow: 15px 15px 4px #114d1e;
 }
 .blog-img{
     display: flex;
@@ -364,68 +305,9 @@ header.sticky {
     align-items: center;
 }
 
-/*********************   FIn Actualités box   *******************************************/
-/*Map interractive*/
-.map-interactive{
-    padding-top: 30px;
-    padding-bottom: 20px;
-    background-color: #222222;
-}
 
-.map-interactive h2{
-    font-size: var(--h2-font);
-    font-weight: 800;
-    margin-bottom: 50px;
-}
-
-.grille-liste_map{
-    margin-top: 50px;
-    margin-bottom: 50px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    overflow: hidden;
-}
-
-.map-image svg{
-    height: 500px;
-    margin: auto;
-}
-
-#SudBasseTerre a{
-    fill: var(--bg-color2);
-    transition: fill 0.8s;
-}
-
-#SudBasseTerre .is-active polygon {
-    fill: var(--main-color);
-}
-
-.map-list p{
-    font-weight: 800;
-    margin-bottom: 10px;
-}
-
-
-.map-list{
-    float: right;
-    width: 50%;
-}
-
-.map-list a{
-    
-    color: inherit;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.map-list a.is-active {
-    color: var(--main-color);
-}
-
-
-
-/*FIN DE Map interractive*/
+/*Fin du design de la grille d'actualités*/
+/*Design bas de page*/
 
 .email {
     margin-top: 40px;
@@ -492,122 +374,3 @@ header.sticky {
     color: var(--bg-color);
     transform: translateX(-4px);
 }
-
-
-@media (max-width:1700px) {
-    header{
-        padding: 18px 8%;
-    }
-
-    header.sticky{
-        padding: 7px 8%;
-    }
-
-    section{
-        padding: 50px 8% 40px;
-    }
-}
-
-@media (max-width: 1200px){
-	header{
-		padding: 14px 5%;
-	}
-	header.sticky{
-		padding: 7px 5%;
-	}
-	section{
-		padding: 45px 5% 35px;
-	}
-	:root{
-		--h1-font: 4.6rem;
-	  --h2-font: 2.8rem;
-	  --p-font: 15px;
-	}
-	.accueil{
-		height: 90vh;
-	}
-}
-
-@media (max-width: 1050px){
-	.feature-contenue{
-		gap: 1.5rem;
-	}
-	.TA-actualités{
-		gap: 3rem;
-	}
-
-	#menu-icon{
-		display: block;
-	}
-
-    .blog-container{
-        max-width: 100%;
-        grid-template-columns: 1fr 1fr;
-    }
-
-	.navbar{
-		position: absolute;
-		width: 100%;
-		height: 100vh;
-		padding: 40px 60px;
-		top: 0;
-		bottom: 0;
-		left: 100%;
-		right: 0;
-		display: flex;
-		flex-direction: column;
-		background: var(--bg-color);
-		transition: all .50s ease;
-	}
-	.navbar a{
-		display: block;
-		color: #979797;
-		padding: 0;
-		margin: 0px 0px 40px 0px;
-		font-size: 2.2rem;
-		font-weight: 400;
-	}
-	.navbar.open{
-		left: 0;
-	}
-}
-
-@media (max-width: 800px){
-	.TA-actualités{
-		grid-template-columns: 1fr;
-	}
-	.email{
-		grid-template-columns: 1fr;
-	}
-}
-
-@media (max-width: 600px){
-	:root{
-		--h1-font: 3.5rem;
-	  --h2-font: 2.1rem;
-	}
-	.accueil{
-		height: 85vh;
-	}
-
-    .blog-container{
-        width:90%;
-        grid-template-columns: 1fr;
-    }
-    .blog-img{
-        height: auto;
-    }
-}
-
-@media (max-width: 450px){
-	header{
-		padding: 12px 3%;
-	}
-	header.sticky{
-		padding: 7px 3%;
-	}
-	section{
-		padding: 60px 3% 50px;
-	}
-}
-
