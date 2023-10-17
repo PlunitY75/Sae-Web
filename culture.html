@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualités</title>
+
+    <!--Lien CSS-->
+
+    <link rel="stylesheet" href="css/culture.css">
+
+    <!--Lien Boxicon-->
+
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!--Lien Lien remixicon-->
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+</head>
+
+<body>
+    <!--Design du header-->
+
+        <header id="navbar">
+            <a href="#" class="logo">GSC<span>.</span></a>
+    
+            <ul class="navbar">
+                <li><a href="accueil.html">Accueil</a></li>
+                <li><a href="actualités-main_menu.html">Actualités</a></li>
+                <li><a href="culture.html"><span class="actuel">Culture</span></a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+    
+            <div class="h-droite">
+                <a href="#">Suivez nous</a>
+                <a href="#"><i class="ri-instagram-fill"></i></a>
+                <a href="#"><i class="ri-twitter-fill"></i></a>
+                <a href="#"><i class="ri-youtube-fill"></i></a>
+                <div class="bx bx-menu" id="menu-icon"></div>
+            </div>
+    
+          
+        </header>
+    
+    <!--Fin du Design du header-->
+    <!--Page d'accueil actu-->
+
+    <section class="accueil">
+        <div class="accueil-texte">
+            <h1>Culture</h1>
+        </div>
+
+        <a class="scrollBouton" id="scrollBouton" href="#"> <i class="fas fa-arrow-up"></i> </a>
+    </section>
+
+    <!--Fin de page d'accueil actu-->
+    <section class="galerie-photo-video" id="galerie-photo-video">
+
+        <h2>Galerie</h2>
+
+        <div class="guadEnImage">
+                <div class="guadEnImage-video">
+                        <video autoplay loop muted >
+                            <source src="video/guad-video.mp4" type="video/mp4">
+                        </video>
+                </div>
+
+
+                <div class="guadEnImage-images">
+                    <img src="Images/img-1.jpg">
+                    <img src="Images/img-2.jpg">
+                    <img src="Images/img-3.jpg">
+                    <img src="Images/img-4.jpg">                
+                </div>
+                
+                <div class="popup-image" style="display: none;">
+                    <span onclick="closePopup()">&times;</span>
+                    <img src="Images/img-1.jpg">
+                </div>
+        </div>
+    </section>
+    
+    <!--Design du bas de la page d'accueil-->
+
+    <section class="footer">
+        <div class="footer-box">
+            <h3>Services</h3>
+            <a href="#">Recrutement</a>
+            <a href="#">Marchés publics</a>
+        </div>
+
+        <div class="footer-box">
+            <h3>Informations générales</h3>
+            <a href="#">Siège</a>
+            <a href="#">Plan du site</a>
+        </div>
+
+        <div class="footer-box">
+            <h3>Informations légales</h3>
+            <a href="#">Mentions légales</a>
+            <a href="#">Gestions des cookies</a>
+        </div>
+
+        <div class="footer-box">
+            <h3>Nos réseaux</h3>
+            <div class="social">
+                <a href="#"><i class="ri-instagram-fill"></i></a>
+                <a href="#"><i class="ri-twitter-fill"></i></a>
+                <a href="#"><i class="ri-youtube-fill"></i></a>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Fichier JS-->
+    
+    <script src="JS/navbar.js"></script>
+    <script src="JS/scroll-culture.js"></script>
+
+    <script>
+
+
+        document.querySelectorAll('.guadEnImage-images img').forEach(image => {
+            image.onclick = () => {
+                const popupImage = document.querySelector('.popup-image img');
+                popupImage.src = image.src;
+
+                // Cacher la navbar lorsque le popup s'ouvre
+
+                document.getElementById('navbar').style.display = 'none';
+                document.querySelector('.popup-image').style.display = 'block';
+            
+
+                
+            }
+        });
+
+        document.querySelector('.popup-image span').onclick = () => {
+            // Réafficher la navbar lorsque le popup est fermé
+            document.getElementById('navbar').style.display = 'flex';
+
+            document.querySelector('.popup-image').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

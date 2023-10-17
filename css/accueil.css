@@ -182,6 +182,30 @@ header.sticky {
 }
 
 
+.scrollBouton{
+    position: absolute;
+    bottom: 20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background: #27ae60;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 22px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease;
+    transform: rotate(180deg);
+
+  }
+  
+
+  .scrollBouton:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.281);
+}
+
 
 /* .feature-contenue {
     display: grid;
@@ -570,6 +594,10 @@ header.sticky {
 	.navbar.open{
 		left: 0;
 	}
+
+    .grille-liste_map{
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 800px){
@@ -596,6 +624,11 @@ header.sticky {
     }
     .blog-img{
         height: auto;
+    }
+
+    .grille-liste_map{
+        width: 90%;
+        grid-template-columns: 1fr;
     }
 }
 
