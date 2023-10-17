@@ -192,6 +192,10 @@ header.sticky {
 
 /*Design de la grille d'images et de la vidéo*/
 
+.galerie-photo-video {
+    background-color: #222222;
+}
+
 .galerie-photo-video h2{
     font-size: var(--h2-font);
     font-weight: 800;
@@ -200,7 +204,8 @@ header.sticky {
 }
 
 .guadEnImage {
-    margin-top: 80px;
+    margin-top: 100px;
+    margin-bottom: 100px;
     display: grid;
     grid-template-columns: 1fr 1fr; 
     grid-column-gap: 10px; 
@@ -277,6 +282,51 @@ header.sticky {
 }
 
 /*Fin de design de la grille d'images et de la video*/
+
+/*Design des lieux à découvrir*/
+
+.Lieu-découverte {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 9rem;
+}
+
+.Lieu-découverte-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.Lieu-découverte-texte h5 {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--main-color);
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    margin-bottom: 20px;
+}
+
+.Lieu-découverte-texte h2 {
+    font-size: var(--h2-font);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.Lieu-découverte-texte p {
+    font-size: var(--p-font);
+    font-weight: 500;
+    line-height: 30px;
+    color: #ffffffab;
+    margin-bottom: 35px;
+}
+
+
+/*Fin du design des lieux à découvrir*/
+
 
 /*Design bas de page*/
 
