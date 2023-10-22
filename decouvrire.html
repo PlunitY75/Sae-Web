@@ -28,13 +28,13 @@
     <!--Design du header-->
 
         <header id="navbar">
-            <a href="#" class="logo">GSC<span>.</span></a>
+            <a href="accueil.html" class="logo">GSC<span>.</span></a>
     
             <ul class="navbar">
                 <li><a href="accueil.html">Accueil</a></li>
                 <li><a href="actualités-main_menu.html">Actualités</a></li>
                 <li><a href="decouvrire.html"><span class="actuel">Découvrir</span></a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
     
             <div class="h-droite">
@@ -64,7 +64,7 @@
     <!--Design de la galerie photo-->
     <section class="galerie-photo-video" id="galerie-photo-video">
 
-        <h2>Galerie</h2>
+        <h2 class="animate">Galerie</h2>
 
         <div class="guadEnImage">
                 <div class="guadEnImage-video">
@@ -72,15 +72,14 @@
                             <source src="video/guad-video.mp4" type="video/mp4">
                         </video>
                 </div>
-
-
-                <div class="guadEnImage-images">
-                    <img src="Images/img-1.jpg">
-                    <img src="Images/img-2.jpg">
-                    <img src="Images/img-3.jpg">
-                    <img src="Images/img-4.jpg">                
+                <div class="animate">
+                    <div class="guadEnImage-images">
+                        <img class="animate" src="Images/img-1.jpg">
+                        <img class="animate" src="Images/img-2.jpg">
+                        <img class="animate" src="Images/img-3.jpg">
+                        <img class="animate" src="Images/img-4.jpg">                
+                    </div>
                 </div>
-                
                 <div class="popup-image" style="display: none;">
                     <span onclick="closePopup()">&times;</span>
                     <img src="Images/img-1.jpg">
@@ -93,41 +92,41 @@
     
     <section class="Lieu-découverte">
         <div class="Lieu-découverte-img">
-            <img src="Images/Culture/soufrierejpg.jpg">
+            <img class="animate" src="Images/Culture/soufrierejpg.jpg">
         </div>
 
         <div class="Lieu-découverte-texte">
-            <h5>Lieu à découvrir</h5>
-            <h2>La soufriere</h2>
-            <p>La rentrée scolaire est un moment important dans la vie de tous . Le président tient à marquer cette étape en soutenant notre jeunesse.</p>
-            <a href="#" class="btn">En savoir plus</a>
-        </div>
+            <h5 class="animate">Lieu à découvrir</h5>
+            <h2 class="animate">La soufriere</h2>
+            <p class="animate">La rentrée scolaire est un moment important dans la vie de tous . Le président tient à marquer cette étape en soutenant notre jeunesse.</p>
+            <a href="#" class="animate" id="btnAnimate">En savoir plus</a>
+    </div>
     </section>
 
     <section class="Lieu-découverte">
 
         <div class="Lieu-découverte-texte">
-            <h5>Lieu à découvrir</h5>
-            <h2>La reserve des Cousteau</h2>
-            <p>La rentrée scolaire est un moment important dans la vie de tous . Le président tient à marquer cette étape en soutenant notre jeunesse.</p>
-            <a href="#" class="btn">En savoir plus</a>
+            <h5 class="animate">Lieu à découvrir</h5>
+            <h2 class="animate">La reserve des Cousteau</h2>
+            <p class="animate">La rentrée scolaire est un moment important dans la vie de tous . Le président tient à marquer cette étape en soutenant notre jeunesse.</p>
+            <a href="#" class="animate" id="btnAnimate2">En savoir plus</a>
         </div>
 
         <div class="Lieu-découverte-img">
-            <img src="Images/Culture/rerserve-cousteau.jpg">
+            <img class="animate" src="Images/Culture/rerserve-cousteau.jpg">
         </div>
     </section>
 
     <section class="Lieu-découverte">
         <div class="Lieu-découverte-img">
-            <img src="Images/Culture/médiathèque.jpg">
+            <img class="animate" src="Images/Culture/médiathèque.jpg">
         </div>
 
         <div class="Lieu-découverte-texte">
-            <h5>Lieu à découvrir</h5>
-            <h2>La médiathèque</h2>
-            <p>La rentrée scolaire est un moment important dans la vie de tous . Le président tient à marquer cette étape en soutenant notre jeunesse.</p>
-            <a href="#" class="btn">En savoir plus</a>
+            <h5 class="animate">Lieu à découvrir</h5>
+            <h2 class="animate">La médiathèque</h2>
+            <p class="animate">La rentrée scolaire est un moment important dans la vie de tous . Le président tient à marquer cette étape en soutenant notre jeunesse.</p>
+            <a href="#" class="animate" id="btnAnimate3">En savoir plus</a>
         </div>
     </section>
 
@@ -156,9 +155,9 @@
         <div class="footer-box">
             <h3>Nos réseaux</h3>
             <div class="social">
-                <a href="#"><i class="ri-instagram-fill"></i></a>
-                <a href="#"><i class="ri-twitter-fill"></i></a>
-                <a href="#"><i class="ri-youtube-fill"></i></a>
+                <a href="https://instagram.com"><i class="ri-instagram-fill"></i></a>
+                <a href="https://X.com"><i class="ri-twitter-fill"></i></a>
+                <a href="https://youtube.com"><i class="ri-youtube-fill"></i></a>
             </div>
         </div>
     </section>
@@ -168,31 +167,5 @@
     
     <script src="JS/navbar.js"></script>
     <script src="JS/scroll-culture.js"></script>
-
-    <script>
-
-
-        document.querySelectorAll('.guadEnImage-images img').forEach(image => {
-            image.onclick = () => {
-                const popupImage = document.querySelector('.popup-image img');
-                popupImage.src = image.src;
-
-                // Cacher la navbar lorsque le popup s'ouvre
-
-                document.getElementById('navbar').style.display = 'none';
-                document.querySelector('.popup-image').style.display = 'block';
-            
-
-                
-            }
-        });
-
-        document.querySelector('.popup-image span').onclick = () => {
-            // Réafficher la navbar lorsque le popup est fermé
-            document.getElementById('navbar').style.display = 'flex';
-
-            document.querySelector('.popup-image').style.display = 'none';
-        }
-    </script>
 </body>
 </html>
