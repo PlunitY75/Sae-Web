@@ -30,6 +30,33 @@ body {
 
 section{
     padding: 70px 17% 60px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+section .animate{
+    opacity: 0;
+    filter: blur(5px);
+    transition: 1s;
+}
+
+section.show-animate .animate{
+    filter: blur(0);
+    opacity: 1;
+}
+
+.accueil-texte{
+    filter: blur(5px);
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slide-in 2s forwards;
+}
+@keyframes slide-in {
+    to{
+        filter: blur(0);
+        transform: translateX(0%);
+        opacity: 1;
+    }
 }
 
 .btn {
