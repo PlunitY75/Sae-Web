@@ -1,0 +1,460 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root{
+    --text-color: #fff;
+    /* --bg-color: #000; */
+    --bg-color: #030303;
+    --main-color: #59c06f;
+
+    --h1-font: 6rem;
+    --h2-font: 3rem;
+    --p-font: 17px;
+}
+
+body {
+    color: var(--text-color);
+    background: var(--bg-color);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    background: transparent;
+    padding: 27px 17%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .50s ease;
+}
+
+.logo{
+    font-size: 33px;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    color: var(--text-color);
+    font-size: var(--p-font);
+    font-weight: 500;
+    margin: 15px 22px;
+    transition: all .50s ease;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+}
+
+.h-droite {
+    display: flex;
+    align-items: center;
+}
+
+.h-droite a:first-child {
+    color: var(--text-color);
+    font-size: var(--p-font);
+    margin-right: 20px;
+}
+
+.h-droite a {
+    vertical-align: middle;
+    font-size: 20px;
+    color: var(--text-color);
+    margin-right: 18px;
+    margin-left: 5px;
+    transition: all .50s ease;
+}
+
+.h-droite a:hover {
+    color: var(--main-color);
+    transform: translateY(-3px);
+}
+
+
+#menu-icon {
+    color: var(--text-color);
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+
+section{
+    padding: 30px 10% 25%;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.4)), url(../Images/illustration-ia-generative-rayons-du-soleil-foret-tropicale-sombre-travers-arbres-riche-verdure-jungle-foret-fantastique-atmospherique_479694-7999.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+/*FORMULAIRE*/
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 8%;
+    width: 100%; 
+}
+
+.contact {
+    width: 40%;
+    height: 70vh;
+    margin-top: 2%;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px rgb(3, 3, 3);
+    background-color: #0c140f;
+    border:5px solid black;
+}
+
+.A {
+    background-color:rgb(8, 8, 8); 
+    position: absolute;
+    margin-bottom: 5%;
+    margin-left: 40%;
+    margin-right: 0; 
+    z-index: 1;
+}
+
+.contact-form{
+    margin:auto;
+    padding:0 10px;
+    overflow: hidden;
+}
+
+.A h1{
+    font-weight: 500;
+    font-size:2.5em;
+    margin-top: 3%;
+    text-align: center;
+    text-shadow: 10px 3px 4px rgba(0, 2, 1, 0.5);
+    font-weight: bold;
+    color:#204228
+}
+
+
+.contact-form{
+    margin:auto;
+    padding:0 10px;
+    overflow: hidden;
+}
+
+.contact-form-text{
+    display:block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2%;
+    margin: 4% 0;
+    transition: 0.5s;
+    background-color: black;
+    color:#5b5a5a;
+    padding: 3%;
+}
+
+.contact-form-text:hover{
+    box-shadow: 0 0 10px 5px darkgreen;
+}
+
+textarea.contact-form-text{
+    resize:none;
+}
+
+.contact-form-btn{
+    margin-left:65%;
+    margin-bottom:3%;
+    padding: 2%;
+    border-radius: 8px;
+    width: 30%;
+    border:5px solid rgb(14, 13, 13);
+}
+
+.contact-form-btn:hover{
+    background-color: #204228;
+    transition: 0.5s;
+    color:white;
+}
+
+
+
+
+/**** CONTACTE****/
+.info {
+    background-color: rgba(255, 255, 255, 0.4);
+    border:5px solid black;
+    position: relative;
+    margin-right: 30%;
+    z-index: 0;
+    padding: 40px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.info h3{
+    font-weight: 500;
+    font-size:2.5em;
+    margin-top:3%;
+    margin-left: 10%;
+    text-shadow: 10px 3px 4px rgba(0, 2, 1, 0.5);
+}
+
+.info .infoBox div{
+    display: flex;
+    align-items: center;
+}
+
+.infoBox{
+    margin-bottom:3%;
+}
+
+.info .infoBox div span{
+    min-width: 60px;
+    height: 60px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    border-radius: 50%;
+}
+
+.info img{
+    height: 40%;
+    width: 40%;
+}
+
+.carte iframe{
+    width: 20em;
+    height: 13em;
+    margin-left: 4%;
+}
+
+
+
+
+/*******FOOTER*******/
+.footer {
+    background-color: rgb(20, 19, 19);
+    padding: 2%;
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    gap: 2rem;
+}
+
+.footer-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-box h1{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.footer-box a{
+    color: #979797;
+    transition: all .50s ease;
+    margin-top: 10px;
+}
+
+.footer-box a:hover{
+    transform: translateX(-4px);
+    color: var(--text-color);
+}
+
+.social a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 45px;
+    background: #202020;
+    color: var(--text-color);
+    font-size: 20px;
+    border-radius: 50%;
+    margin-right: 8px;
+    transition: transform 0.6s;
+}
+
+.social a:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+    transform: translateX(-4px);
+}
+
+
+
+
+
+
+@media (max-width:1700px) {
+    header{
+        padding: 18px 8%;
+    }
+
+    header.sticky{
+        padding: 7px 8%;
+    }
+
+    section{
+        padding: 50px 8% 40px;
+    }
+}
+
+@media (max-width: 1200px){
+	header{
+		padding: 14px 5%;
+	}
+	header.sticky{
+		padding: 7px 5%;
+	}
+	section{
+		padding: 45px 5% 35px;
+	}
+	:root{
+		--h1-font: 4.6rem;
+	  --h2-font: 2.8rem;
+	  --p-font: 15px;
+	}
+}
+
+@media (max-width: 1050px){
+
+
+	#menu-icon{
+		display: block;
+	}
+
+	.navbar{
+		position: absolute;
+		width: 100%;
+		height: 100vh;
+		padding: 40px 60px;
+		top: 0;
+		bottom: 0;
+		left: 100%;
+		right: 0;
+		display: flex;
+		flex-direction: column;
+		background: var(--bg-color);
+		transition: all .50s ease;
+	}
+	.navbar a{
+		display: block;
+		color: #979797;
+		padding: 0;
+		margin: 0px 0px 40px 0px;
+		font-size: 2.2rem;
+		font-weight: 400;
+	}
+	.navbar.open{
+		left: 0;
+	}
+
+    
+}
+
+@media (max-width: 1110px){
+    .carte iframe {
+        margin: 2%;
+    }
+}
+
+@media (max-width: 1080px){
+    .carte iframe {
+        width: 100%; 
+        height: 100%; 
+        margin-right: 2%;
+    }
+}
+@media (max-width: 730px){
+
+    .box{
+        flex-direction: column;
+        margin-top: 20%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact{
+        width: 60%;
+    }
+
+    .A{
+        position: relative;
+        margin: auto;
+        margin-bottom: 2%;
+        height: 40%;
+    }
+    .info {
+        margin: auto;
+    }
+
+    h1{
+        text-align: center;
+    }
+    .hor{
+        text-align: center;
+        margin: auto;
+    }
+    .hor p{
+        margin-top: 3%;
+    }
+
+}
+
+
+@media (max-width: 600px){
+	:root{
+		--h1-font: 3.5rem;
+	  --h2-font: 2.1rem;
+	}
+}
+
+@media (max-width: 500px){
+	header{
+		padding: 12px 3%;
+	}
+	header.sticky{
+		padding: 7px 3%;
+	}
+	section{
+		padding: 60px 3% 50px;
+	}
+
+    iframe{
+        width:50%;
+        height: 40%;
+    }
+}

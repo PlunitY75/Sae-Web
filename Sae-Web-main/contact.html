@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Sud Caraïbes</title>
+
+    <!--Lien CSS-->
+
+    <link rel="stylesheet" href="css/contact.css">
+
+    <!--Lien Boxicon-->
+
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!--Lien Lien remixicon-->
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+    <!--Design du header-->
+
+    <header>
+        <a href="accueil.html" class="logo">GSC<span>.</span></a>
+
+        <ul class="navbar">
+            <li><a href="accueil.html">Accueil</a></li>
+            <li><a href="actualités-main_menu.html">Actualités</a></li>
+            <li><a href="culture.html">Culture</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="h-droite">
+            <a href="#">Suivez nous</a>
+            <a href="#"><i class="ri-instagram-fill"></i></a>
+            <a href="#"><i class="ri-twitter-fill"></i></a>
+            <a href="#"><i class="ri-youtube-fill"></i></a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+    
+    <div class="box">
+        <div class="contact A">
+            <h1>Formulaire</h1>
+            <form class="contact-form" action="contact.html" method="post">
+                <input type="text" class="contact-form-text" placeholder="Nom" required>
+                <input type="text" class="contact-form-text" placeholder="Prenom" required>
+                <input type="text" class="contact-form-text" placeholder="Email" required>
+                <textarea class="contact-form-text" placeholder="Votre message" required></textarea>
+                <input type="submit" class="contact-form-btn" value="Envoyer" id="button">
+            </form>
+        </div>
+
+        <div class="contact info">
+            <h3>Nous contacter</h3>
+            <div class="infoBox ">
+                <div>
+                    <span><img src="Images/viber.png"></span>
+                    <p>+33 1 23 45 67 89</p>
+                </div>
+
+                <div>
+                    <span><img src="Images/horloge-et-calendrier.png"></span>
+                    <p> Lundi - Vendredi <br> 7H30-13H | 14H30-17H </p>
+                </div>
+            </div>
+
+            <div class="carte">
+                <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d958.8357391813803!2d-61.73005089999995!3d15.995652700000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c149fc6ab7260f5%3A0x948d1d87637e8a6!2s12%20Rue%20B%C3%A9bian%2C%20Basse-Terre%2097100%2C%20Guadeloupe!5e0!3m2!1sfr!2sfr!4v1697139064690!5m2!1sfr!2sfr"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!--Fin du design de la partie contacte de l'accueil-->
+    <!--Design du bas de la page d'accueil-->
+    <div class="footer">
+        <div class="footer-box">
+            <h3>Services</h3>
+            <a href="#">Recrutement</a>
+            <a href="#">Marchés publics</a>
+        </div>
+
+        <div class="footer-box">
+            <h3>Informations générales</h3>
+            <a href="#">Siège</a>
+            <a href="#">Plan du site</a>
+        </div>
+
+        <div class="footer-box">
+            <h3>Informations légales</h3>
+            <a href="#">Mentions légales</a>
+            <a href="#">Gestions des cookies</a>
+        </div>
+
+        <div class="footer-box">
+            <h3>Nos réseaux</h3>
+            <div class="social">
+                <a href="#"><i class="ri-instagram-fill"></i></a>
+                <a href="#"><i class="ri-twitter-fill"></i></a>
+                <a href="#"><i class="ri-youtube-fill"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!--Fichier JS-->
+    <script src="JS/accueil.js"></script>
+</body>
+</html>

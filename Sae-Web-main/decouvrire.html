@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualités</title>
+
+    <!--Lien CSS-->
+
+    <link rel="stylesheet" href="css/culture.css">
+
+    <!--Lien Boxicon-->
+
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!--Lien Lien remixicon-->
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+</head>
+
+<body>
+    <!--Design du header-->
+
+        <header id="navbar">
+            <a href="accueil.html" class="logo">GSC<span>.</span></a>
+    
+            <ul class="navbar">
+                <li><a href="accueil.html">Accueil</a></li>
+                <li><a href="actualités-main_menu.html">Actualités</a></li>
+                <li><a href="decouvrire.html"><span class="actuel">Découvrir</span></a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+    
+            <div class="h-droite">
+                <a href="#">Suivez nous</a>
+                <a href="#"><i class="ri-instagram-fill"></i></a>
+                <a href="#"><i class="ri-twitter-fill"></i></a>
+                <a href="#"><i class="ri-youtube-fill"></i></a>
+                <div class="bx bx-menu" id="menu-icon"></div>
+            </div>
+    
+          
+        </header>
+    
+    <!--Fin du Design du header-->
+    <!--Page d'accueil actu-->
+
+    <section class="accueil">
+        <div class="accueil-texte">
+            <h1>Culture</h1>
+        </div>
+
+        <a class="scrollBouton" id="scrollBouton" href="#"> <i class="fas fa-arrow-up"></i> </a>
+    </section>
+
+    <!--Fin de page d'accueil actu-->
+
+    <!--Design de la galerie photo-->
+    <section class="galerie-photo-video" id="galerie-photo-video">
+
+        <h2 class="animate">Galerie</h2>
+
+        <div class="guadEnImage">
+                <div class="guadEnImage-video">
+                        <video autoplay loop muted >
+                            <source src="video/guad-video.mp4" type="video/mp4">
+                        </video>
+                </div>
+                <div class="animate">
+                    <div class="guadEnImage-images">
+                        <img class="animate" src="Images/img-1.jpg">
+                        <img class="animate" src="Images/img-2.jpg">
+                        <img class="animate" src="Images/img-3.jpg">
+                        <img class="animate" src="Images/img-4.jpg">                
+                    </div>
+                </div>
+                <div class="popup-image" style="display: none;">
+                    <span onclick="closePopup()">&times;</span>
+                    <img src="Images/img-1.jpg">
+                </div>
+        </div>
+    </section>
+    
+    <!--Fin du design de la galerie photo-->
+    <!--Design des lieux à visiter-->
+    
+    <section class="Lieu-découverte">
+        <div class="Lieu-découverte-img">
+            <img class="animate" src="Images/Culture/soufrierejpg.jpg">
+        </div>
+
+        <div class="Lieu-découverte-texte">
+            <h5 class="animate">Lieu à découvrir</h5>
+            <h2 class="animate">La soufriere</h2>
+            <p class="animate">La rentrée scolaire est un moment important dans la vie de tous . Le président tient à marquer cette étape en soutenant notre jeunesse.</p>
+            <a href="#" class="animate" id="btnAnimate">En savoir plus</a>
+    </div>
+    </section>
+
+    <section class="Lieu-découverte">
+
+        <div class="Lieu-découverte-texte">
+            <h5 class="animate">Lieu à découvrir</h5>
+            <h2 class="animate">La reserve des Cousteau</h2>
+            <p class="animate">La rentrée scolaire est un moment important dans la vie de tous . Le président tient à marquer cette étape en soutenant notre jeunesse.</p>
+            <a href="#" class="animate" id="btnAnimate2">En savoir plus</a>
+        </div>
+
+        <div class="Lieu-découverte-img">
+            <img class="animate" src="Images/Culture/rerserve-cousteau.jpg">
+        </div>
+    </section>
+
+    <section class="Lieu-découverte">
+        <div class="Lieu-découverte-img">
+            <img class="animate" src="Images/Culture/médiathèque.jpg">
+        </div>
+
+        <div class="Lieu-découverte-texte">
+            <h5 class="animate">Lieu à découvrir</h5>
+            <h2 class="animate">La médiathèque</h2>
+            <p class="animate">La rentrée scolaire est un moment important dans la vie de tous . Le président tient à marquer cette étape en soutenant notre jeunesse.</p>
+            <a href="#" class="animate" id="btnAnimate3">En savoir plus</a>
+        </div>
+    </section>
+
+    <!--Fin du design des lieux à visiter-->
+    <!--Design du bas de la page d'accueil-->
+
+    <section class="footer">
+        <div class="footer-box">
+            <h3>Services</h3>
+            <a href="#">Recrutement</a>
+            <a href="#">Marchés publics</a>
+        </div>
+
+        <div class="footer-box">
+            <h3>Informations générales</h3>
+            <a href="#">Siège</a>
+            <a href="#">Plan du site</a>
+        </div>
+
+        <div class="footer-box">
+            <h3>Informations légales</h3>
+            <a href="#">Mentions légales</a>
+            <a href="#">Gestions des cookies</a>
+        </div>
+
+        <div class="footer-box">
+            <h3>Nos réseaux</h3>
+            <div class="social">
+                <a href="https://instagram.com"><i class="ri-instagram-fill"></i></a>
+                <a href="https://X.com"><i class="ri-twitter-fill"></i></a>
+                <a href="https://youtube.com"><i class="ri-youtube-fill"></i></a>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Fichier JS-->
+    
+    <script src="JS/navbar.js"></script>
+    <script src="JS/scroll-culture.js"></script>
+</body>
+</html>
