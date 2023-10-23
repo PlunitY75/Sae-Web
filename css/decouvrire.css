@@ -25,9 +25,8 @@
 
 body {
     color: var(--text-color);
-    background: var(--bg-color);
+    background-color: var(--bg-color);
 }
-
 
 section{
     padding: 70px 17% 60px;
@@ -38,6 +37,9 @@ section{
 section .animate{
     opacity: 0;
     filter: blur(5px);
+    transition: 1s;
+}
+section.galerie-photo-video .animate{
     transition: 1s;
 }
 
@@ -58,8 +60,32 @@ section.show-animate .animate{
     transition: all .50s ease;
     cursor: pointer; 
 }
-
 #btnAnimate {
+    display: inline-block;
+    padding: 13px 40px;
+    background: var(--main-color);
+    color: var(--bg-color);
+    font-size: 15px;
+    font-weight: 600;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: all .50s ease;
+    cursor: pointer; 
+}
+
+#btnAnimate2 {
+    display: inline-block;
+    padding: 13px 40px;
+    background: var(--main-color);
+    color: var(--bg-color);
+    font-size: 15px;
+    font-weight: 600;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: all .50s ease;
+    cursor: pointer; 
+}
+#btnAnimate3 {
     display: inline-block;
     padding: 13px 40px;
     background: var(--main-color);
@@ -161,6 +187,7 @@ header {
     display: none;
 }
 
+
 header.sticky {
     padding: 8px 17%;
     background: transparent;
@@ -169,44 +196,25 @@ header.sticky {
 
 /*Fin de la navbar*/
 
+/*Design accueil*/
+
 
 .accueil {
     position: relative;
     height: 100vh;
     width: 100%;
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.4)), url(../Images/cascade-la-coulisse-trois-rivieres-guadeloupe-guillaume-aricique.jpg);
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.4)), url(../Images/iguane.jpeg);
     background-size: cover;
-    background-position: bottom center;
+    background-position: center;
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
 
-.accueil-texte h5{
-    font-size: 19px;
-    font-weight: 600;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    color: var(--main-color);
-}
-
-.accueil-texte h1{ 
+.accueil-texte h1{
     font-size: var(--h1-font);
     font-weight: 800;
-    line-height: 1.2;
     margin-bottom: 20px;
-}
-
-.accueil-texte p{
-    font-size: var(--p-font);
-    font-weight: 500;
-    line-height: 30px;
-    color: #ffffffab;
-    margin-bottom: 35px;
-}
-
-.accueil-texte{
     filter: blur(5px);
     opacity: 0;
     transform: translateX(-100%);
@@ -244,48 +252,104 @@ header.sticky {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.281);
 }
 
+/*Fin du design de l'accueil*/
 
-/* .feature-contenue {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
-    align-items: center;
-    text-align: center;
-    gap: 3rem;
-}
+/*Design de la grille d'images et de la vidéo*/
 
-.rangement-images {
-    overflow: hidden;
-    width: 100px;
-    height: 100px;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.rangement-images img {
-    width: 100%;
-    display: block;
-    transition: transform 0.7s;
-}
-
-.rangement-images img:hover {
-    transform: scale(1.2);
-}
-
-.feature-contenue h4 {
-    font-size: 17px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all .50s ease;
-}
-
-.feature-contenue h4:hover {
-    color: var(--main-color);
-}  */
-
-.TA-actualités {
+.galerie-photo-video {
     background-color: #222222;
+}
+
+.galerie-photo-video h2{
+    font-size: var(--h2-font);
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+}
+
+.guadEnImage {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-column-gap: 10px; 
+    gap: 80px;
+}
+
+.guadEnImage-video {
+    grid-column: 1; 
+    align-self: start; 
+    box-shadow: 5px 5px 4px #114d1e;
+}
+
+.guadEnImage-images {
+    grid-column: 2; 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-row-gap: 10px; 
+    cursor: pointer;
+}
+
+.guadEnImage-images img {
+    width: 280px;
+    height: 150px; 
+    object-fit: cover;
+    display: block;
+    margin: 5px; 
+    transition: transform 0.4s;
+    box-shadow: 5px 5px 4px #114d1e;
+}
+
+
+.guadEnImage-video video {
+    max-width: 100%; 
+    height: auto;
+}
+
+.guadEnImage-images img:hover { 
+    transform: scale(1.02);
+}
+
+.popup-image {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-image img {
+    margin-top: 100px;
+    max-width: 80%;
+    max-height: 80%;
+    border: 5px solid #fff;
+    border-radius: 5px;
+    object-fit: contain;
+}
+
+.popup-image span {
+    position: absolute;
+    top: 90px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+   
+}
+
+/*Fin de design de la grille d'images et de la video*/
+
+/*Design des lieux à découvrir*/
+
+.Lieu-découverte {
     padding-top: 100px;
     padding-bottom: 100px;
     display: grid;
@@ -294,27 +358,13 @@ header.sticky {
     gap: 9rem;
 }
 
-
-
-.TA-actualités .TA-actualités-img .animate {
-    transform: translateX(-100%);
-}
-
-.TA-actualités .TA-actualités-texte .animate {
-    transform: translateX(100%);
-}
-
-.TA-actualités.show-animate .animate {
-    transform: translateX(0);
-}
-
-.TA-actualités-img img {
+.Lieu-découverte-img img {
     width: 100%;
     height: auto;
     border-radius: 10px;
 }
 
-.TA-actualités-texte h5 {
+.Lieu-découverte-texte h5 {
     font-size: 22px;
     font-weight: 600;
     color: var(--main-color);
@@ -323,14 +373,14 @@ header.sticky {
     margin-bottom: 20px;
 }
 
-.TA-actualités-texte h2 {
+.Lieu-découverte-texte h2 {
     font-size: var(--h2-font);
     font-weight: 800;
     line-height: 1.2;
     margin-bottom: 25px;
 }
 
-.TA-actualités-texte p {
+.Lieu-découverte-texte p {
     font-size: var(--p-font);
     font-weight: 500;
     line-height: 30px;
@@ -338,178 +388,97 @@ header.sticky {
     margin-bottom: 35px;
 }
 
-/*********************   Actualités box   *******************************************/
-
-#actualité-grid{
-	text-align: center;
-    margin-bottom: 80px;
-}
-#actualité-grid h2{
-	font-size: var(--h2-font);
-	font-weight: 800;
-}
-section.actualités .blog-container{
-    transform: translateY(100%);
-}
-
-section.actualités.show-animate .blog-container{
-    transform: translateY(0%);
-    transition: 1s;
-}
-
-.blog-container{
-    display: grid;
-    max-width: 1200px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    margin: auto;
-}
-
-
-.blog-box{
-    border-radius: 10px;
-    padding: 20px;
-    background-color: #ffffff;
-    margin: 20px;
-    box-shadow: 2px 2px 30px rgba(0,0,0,0.05);
-}
-.blog-img{
-    display: flex;
-    width:100%;
-    min-height: 185px;
-    overflow: hidden;
-    border-radius: 5px;
-    position: relative;
-}
-.blog-img img{
-    width:100%;
+.popup{
+    position: fixed;
+    top: -100vh;
+    left: 0px;
+    width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-.category{
-    color: #ffffff;
+    transition: top 0ms ease-in-out 300ms;
+  }
+  
+  .popup .overlay {
     position: absolute;
-    left: 10px;
-    top: 10px;
-    padding: 2px 10px;
-    font-size: 0.9rem;
-}
-.app .category{
-    background-color: #6e5eff;
-}
-.new .category{
-    background-color: #ff695e;
-}
-.web .category{
-    background-color: #ff5eb7;
-}
-.blog-text strong{
-    font-size: 1.2rem;
-    color: #20232b;
-    display: flex;
-    font-weight: 400;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 100ms ease-in-out 200ms;
+  }
+  
+  .popup .popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.15);
+    width: 95%;
+    max-width: 600px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 20px;
+    opacity: 0;
+    box-shadow: 0px 2px 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 300ms ease-in-out;
+  }
+  
+  .popup .popup-content h2 {
     margin: 10px 0px;
-    line-height: 25px;
-}
-
-.text-actu{
-    transition: all .2s ease;
-}
-
-
-.text-actu:hover{
-    color: gray;
-}
-
-.category-time{
+    font-size: 25px;
+    color: #111;
+    text-align: center;
+  }
+  
+  .popup .popup-content p {
+    margin: 15px 0px;
+    color: #222;
+    font-size: 16px;
+    /* text-align: center; */
+  }
+  
+  .popup .popup-content .controls {
     display: flex;
-    align-items: center;
-}
-.category-time span{
-    font-size: 0.8rem;
-}
-.blog-category{
-    padding: 3px 6px;
-    color: #484f61;
-    font-weight: 500;
-    background-color: rgba(0,0,0,0.06);
-}
-.published-time{
-    margin-left: 10px;
-    color: #db3838;
-    font-weight: 500;
-}
-
-.center-btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/*********************   FIn Actualités box   *******************************************/
-/*Map interractive*/
-.map-interactive{
-    padding-top: 30px;
-    padding-bottom: 20px;
-    background-color: #222222;
-}
-
-.map-interactive h2{
-    font-size: var(--h2-font);
-    font-weight: 800;
-    margin-bottom: 50px;
-}
-
-.grille-liste_map{
-    margin-top: 50px;
-    margin-bottom: 50px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    overflow: hidden;
-}
-
-.map-image svg{
-    height: 500px;
-    margin: auto;
-}
-
-#SudBasseTerre a{
-    fill: var(--bg-color2);
-    transition: fill 0.8s;
-}
-
-#SudBasseTerre .is-active polygon {
-    fill: var(--main-color);
-}
-
-.map-list p{
-    font-weight: 800;
-    margin-bottom: 10px;
-}
+    justify-content: space-between;
+    margin: 20px 0px 0px;
+  }
+  
+  .popup .popup-content .controls button {
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .popup .popup-content .controls .close-btn{
+    background: transparent;
+    color: #2b8b3b;
+  }
+  
+  .popup.active{
+    top: 0px;
+    transition: top 0ms ease-in-out 0ms;
+  }
+  
+  .popup.active .overlay {
+    opacity: 1;
+    transition: all 300ms ease-in-out;
+  }
+  
+  .popup.active .popup-content{
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
 
 
-.map-list{
-    float: right;
-    width: 50%;
-}
+  /*Fin des Pop lieu à découvrir*/
 
-.map-list a{
-    
-    color: inherit;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.map-list a.is-active {
-    color: var(--main-color);
-}
+/*Fin du design des lieux à découvrir*/
 
 
-
-/*FIN DE Map interractive*/
+/*Design bas de page*/
 
 .email {
     margin-top: 40px;
@@ -577,6 +546,7 @@ section.actualités.show-animate .blog-container{
     transform: translateX(-4px);
 }
 
+/*REsponsiv*/
 
 @media (max-width:1700px) {
     header{
@@ -589,6 +559,12 @@ section.actualités.show-animate .blog-container{
 
     section{
         padding: 50px 8% 40px;
+    }
+}
+
+@media (max-width:1500px) {
+    .guadEnImage-video video {
+        max-width: 100%;
     }
 }
 
@@ -609,6 +585,45 @@ section.actualités.show-animate .blog-container{
 	}
 	.accueil{
 		height: 90vh;
+	}
+
+    .guadEnImage {
+        gap: 40px;
+    }
+
+    .guadEnImage-video video {
+        max-width: 100%;
+    }
+
+}
+
+@media (max-width:1100px){
+    .guadEnImage {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .guadEnImage-video {
+        grid-column: auto;
+        margin-bottom: 20px;
+    }
+
+    .guadEnImage-images {
+        grid-column: auto;
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+
+    .guadEnImage-images img {
+        width: 100%;
+        height: auto;
+        
+    }
+
+    .Lieu-découverte{
+		gap: 3rem;
 	}
 }
 
@@ -654,42 +669,28 @@ section.actualités.show-animate .blog-container{
 	.navbar.open{
 		left: 0;
 	}
-
-    .grille-liste_map{
-        max-width: 100%;
-    }
 }
 
-@media (max-width: 800px){
-	.TA-actualités{
-		grid-template-columns: 1fr;
-	}
-	.email{
+@media (max-width:768px){
+    .popup-image img{
+        width: 95%;
+    }
+    
+    .guadEnImage {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .Lieu-découverte{
 		grid-template-columns: 1fr;
 	}
 }
 
 @media (max-width: 600px){
-	:root{
+    :root{
 		--h1-font: 3.5rem;
 	  --h2-font: 2.1rem;
 	}
-	.accueil{
-		height: 85vh;
-	}
-
-    .blog-container{
-        width:90%;
-        grid-template-columns: 1fr;
-    }
-    .blog-img{
-        height: auto;
-    }
-
-    .grille-liste_map{
-        width: 90%;
-        grid-template-columns: 1fr;
-    }
 }
 
 @media (max-width: 450px){
@@ -703,4 +704,3 @@ section.actualités.show-animate .blog-container{
 		padding: 60px 3% 50px;
 	}
 }
-

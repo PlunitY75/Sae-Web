@@ -7,7 +7,7 @@
 
     <!--Lien CSS-->
 
-    <link rel="stylesheet" href="css/culture.css">
+    <link rel="stylesheet" href="css/decouvrire.css">
 
     <!--Lien Boxicon-->
 
@@ -22,13 +22,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
     <!--Design du header-->
 
         <header id="navbar">
-            <a href="accueil.html" class="logo">GSC<span>.</span></a>
+            <a href="#" class="logo">GSC<span>.</span></a>
     
             <ul class="navbar">
                 <li><a href="accueil.html">Accueil</a></li>
@@ -64,7 +66,7 @@
     <!--Design de la galerie photo-->
     <section class="galerie-photo-video" id="galerie-photo-video">
 
-        <h2 class="animate">Galerie</h2>
+        <h2>Galerie</h2>
 
         <div class="guadEnImage">
                 <div class="guadEnImage-video">
@@ -72,14 +74,15 @@
                             <source src="video/guad-video.mp4" type="video/mp4">
                         </video>
                 </div>
-                <div class="animate">
-                    <div class="guadEnImage-images">
-                        <img class="animate" src="Images/img-1.jpg">
-                        <img class="animate" src="Images/img-2.jpg">
-                        <img class="animate" src="Images/img-3.jpg">
-                        <img class="animate" src="Images/img-4.jpg">                
-                    </div>
+
+
+                <div class="guadEnImage-images">
+                    <img src="Images/img-1.jpg">
+                    <img src="Images/img-2.jpg">
+                    <img src="Images/img-3.jpg">
+                    <img src="Images/img-4.jpg">                
                 </div>
+                
                 <div class="popup-image" style="display: none;">
                     <span onclick="closePopup()">&times;</span>
                     <img src="Images/img-1.jpg">
@@ -92,43 +95,87 @@
     
     <section class="Lieu-découverte">
         <div class="Lieu-découverte-img">
-            <img class="animate" src="Images/Culture/soufrierejpg.jpg">
+            <img src="Images/Culture/soufrierejpg.jpg">
         </div>
 
         <div class="Lieu-découverte-texte">
-            <h5 class="animate">Lieu à découvrir</h5>
-            <h2 class="animate">La soufriere</h2>
-            <p class="animate">La rentrée scolaire est un moment important dans la vie de tous . Le président tient à marquer cette étape en soutenant notre jeunesse.</p>
-            <a href="#" class="animate" id="btnAnimate">En savoir plus</a>
+            <h5>Lieu à découvrir</h5>
+            <h2>La soufriere</h2>
+            <p>La Soufrière est un volcan en activité se trouvant sur l'ile de Guadeloupe et fait partie d'un ensemble volcanique commprenant plusieurs bouches éruptives.</p>
+            <button class="btn" id="open-popup" data-popup="popup1">En savoir plus</button>
+        </div>
+    </section>
+
+    <section class="Lieu-découverte">
+
+        <div class="Lieu-découverte-texte">
+            <h5>Lieu à découvrir</h5>
+            <h2>La reserve des Cousteau</h2>
+            <p>La rentrée scolaire est un moment important dans la vie de tous . Le président tient à marquer cette étape en soutenant notre jeunesse.</p>
+            <button class="btn" id="open-popup"  data-popup="popup2">En savoir plus</button>
+        </div>
+
+        <div class="Lieu-découverte-img">
+            <img src="Images/Culture/rerserve-cousteau.jpg">
+        </div>
+    </section>
+
+    <section class="Lieu-découverte">
+        <div class="Lieu-découverte-img">
+            <img src="Images/Culture/médiathèque.jpg">
+        </div>
+
+        <div class="Lieu-découverte-texte">
+            <h5>Lieu à découvrir</h5>
+            <h2>La médiathèque</h2>
+            <p>La rentrée scolaire est un moment important dans la vie de tous . Le président tient à marquer cette étape en soutenant notre jeunesse.</p>
+            <button class="btn" id="open-popup"  data-popup="popup3">En savoir plus</button>
+        </div>
+    </section>
+
+    <!--Popup permettant l'accès à des informations supplémentaires sur le lieux-->
+    <div class="popup" id="popup1">
+        <div class="overlay"></div>
+        <div class="popup-content">
+            <h2>La Soufriere</h2>
+            <p>
+            <i class="ri-map-pin-fill"></i> Le volcan se trouvant dans le massif de Basse-Terre plus précisement dans la commune de Saint-Claude (<a href="https://bit.ly/46Fv6Dk" target="_blank">16° 02′ 38″ nord, 61° 39′ 48″ ouest</a>)
+            </p>
+            <p><i class="ri-arrow-right-up-line"></i> 1467 mètres d'altidude </p>
+            
+          
+  
+            <div class="controls">
+            <button class="close-btn">Fermer</button>
+          </div>
+        </div>
     </div>
-    </section>
 
-    <section class="Lieu-découverte">
-
-        <div class="Lieu-découverte-texte">
-            <h5 class="animate">Lieu à découvrir</h5>
-            <h2 class="animate">La reserve des Cousteau</h2>
-            <p class="animate">La rentrée scolaire est un moment important dans la vie de tous . Le président tient à marquer cette étape en soutenant notre jeunesse.</p>
-            <a href="#" class="animate" id="btnAnimate2">En savoir plus</a>
+    <div class="popup" id="popup2">
+        <div class="overlay"></div>
+        <div class="popup-content">
+          <h2>La reserve des Cousteau</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ad accusamus facilis assumenda. Eos accusamus reprehenderit reiciendis perspiciatis, hic numquam dolore velit similique facere cum, obcaecati illum sunt odit. Dicta?</p>
+          
+  
+          <div class="controls">
+            <button class="close-btn">Fermer</button>
+          </div>
         </div>
+    </div>
 
-        <div class="Lieu-découverte-img">
-            <img class="animate" src="Images/Culture/rerserve-cousteau.jpg">
+    <div class="popup" id="popup3">
+        <div class="overlay"></div>
+        <div class="popup-content">
+          <h2>La Soufriere</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ad accusamus facilis assumenda. Eos accusamus reprehenderit reiciendis perspiciatis, hic numquam dolore velit similique facere cum, obcaecati illum sunt odit. Dicta?</p>
+          
+  
+          <div class="controls">
+            <button class="close-btn">Fermer</button>
+          </div>
         </div>
-    </section>
-
-    <section class="Lieu-découverte">
-        <div class="Lieu-découverte-img">
-            <img class="animate" src="Images/Culture/médiathèque.jpg">
-        </div>
-
-        <div class="Lieu-découverte-texte">
-            <h5 class="animate">Lieu à découvrir</h5>
-            <h2 class="animate">La médiathèque</h2>
-            <p class="animate">La rentrée scolaire est un moment important dans la vie de tous . Le président tient à marquer cette étape en soutenant notre jeunesse.</p>
-            <a href="#" class="animate" id="btnAnimate3">En savoir plus</a>
-        </div>
-    </section>
+    </div>
 
     <!--Fin du design des lieux à visiter-->
     <!--Design du bas de la page d'accueil-->
@@ -155,9 +202,9 @@
         <div class="footer-box">
             <h3>Nos réseaux</h3>
             <div class="social">
-                <a href="https://instagram.com"><i class="ri-instagram-fill"></i></a>
-                <a href="https://X.com"><i class="ri-twitter-fill"></i></a>
-                <a href="https://youtube.com"><i class="ri-youtube-fill"></i></a>
+                <a href="#"><i class="ri-instagram-fill"></i></a>
+                <a href="#"><i class="ri-twitter-fill"></i></a>
+                <a href="#"><i class="ri-youtube-fill"></i></a>
             </div>
         </div>
     </section>
@@ -167,5 +214,34 @@
     
     <script src="JS/navbar.js"></script>
     <script src="JS/scroll-culture.js"></script>
+    <script src="JS/popup.js"></script>
+
+    <script>
+
+
+        document.querySelectorAll('.guadEnImage-images img').forEach(image => {
+            image.onclick = () => {
+                const popupImage = document.querySelector('.popup-image img');
+                popupImage.src = image.src;
+
+                // Cacher la navbar lorsque le popup s'ouvre
+
+                document.getElementById('navbar').style.display = 'none';
+                document.querySelector('.popup-image').style.display = 'block';
+            
+
+                
+            }
+        });
+
+        document.querySelector('.popup-image span').onclick = () => {
+            // Réafficher la navbar lorsque le popup est fermé
+            document.getElementById('navbar').style.display = 'flex';
+
+            document.querySelector('.popup-image').style.display = 'none';
+        }
+    </script>
+
+    
 </body>
 </html>
