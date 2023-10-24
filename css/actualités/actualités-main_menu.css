@@ -177,7 +177,7 @@ header.sticky {
     position: relative;
     height: 100vh;
     width: 100%;
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.4)), url(../../Images/cascade-la-coulisse-trois-rivieres-guadeloupe-guillaume-aricique.jpg);
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.4)), url(../../Images/actu-background.jpg);
     background-size: cover;
     background-position: bottom center;
     display: flex;
@@ -189,6 +189,15 @@ header.sticky {
     font-size: var(--h1-font);
     font-weight: 800;
     margin-bottom: 20px;
+}
+
+.accueil-texte h5{
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--main-color);
 }
 
 .scrollBouton{
@@ -260,23 +269,6 @@ header.sticky {
     object-position: center;
 }
 
-.category{
-    color: #ffffff;
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    padding: 2px 10px;
-    font-size: 0.9rem;
-}
-.app .category{
-    background-color: #6e5eff;
-}
-.new .category{
-    background-color: #ff695e;
-}
-.web .category{
-    background-color: #ff5eb7;
-}
 .blog-text strong{
     font-size: 1.2rem;
     color: #20232b;
@@ -287,6 +279,7 @@ header.sticky {
 }
 
 .text-actu{
+    cursor: pointer;
     transition: all .2s ease;
 }
 
@@ -319,6 +312,92 @@ header.sticky {
     justify-content: center;
     align-items: center;
 }
+
+/*Design des popups*/
+
+.popup{
+    position: fixed;
+    top: -100vh;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    transition: top 0ms ease-in-out 300ms;
+  }
+  
+  .popup .overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 100ms ease-in-out 200ms;
+  }
+  
+  .popup .popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.15);
+    width: 95%;
+    max-width: 1000px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 20px;
+    opacity: 0;
+    box-shadow: 0px 2px 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 300ms ease-in-out;
+  }
+  
+  .popup .popup-content h2 {
+    margin: 10px 0px;
+    font-size: 25px;
+    color: #111;
+    text-align: center;
+  }
+  
+  .popup .popup-content p {
+    margin: 15px 0px;
+    color: #222;
+    font-size: 16px;
+    /* text-align: center; */
+  }
+  
+  .popup .popup-content .controls {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px 0px;
+  }
+  
+  .popup .popup-content .controls button {
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .popup .popup-content .controls .close-btn{
+    background: transparent;
+    color: #2b8b3b;
+  }
+  
+  .popup.active{
+    top: 0px;
+    transition: top 0ms ease-in-out 0ms;
+  }
+  
+  .popup.active .overlay {
+    opacity: 1;
+    transition: all 300ms ease-in-out;
+  }
+  
+  .popup.active .popup-content{
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
 
 
 /*Fin du design de la grille d'actualités*/
@@ -479,6 +558,10 @@ header.sticky {
         }
         .blog-img{
             height: auto;
+        }
+
+        .actu-popup-texte {
+            font-size: 1px;
         }
     }
 
