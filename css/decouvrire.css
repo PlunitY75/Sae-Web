@@ -220,6 +220,16 @@ header.sticky {
     transform: translateX(-100%);
     animation: slide-in 2s forwards;
 }
+
+.accueil-texte h5{
+    font-size: 19px;
+    font-weight: 1000;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--main-color);
+}
+
 @keyframes slide-in {
     to{
         filter: blur(0);
